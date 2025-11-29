@@ -12,13 +12,17 @@ jobs:
           node-version: 18
       - name: install dependencies
         run: npm install
+        working-directory: ./04\ Practice\ Project\ (Start)
       - name: lint the code
         run: npm run lint
+        working-directory: ./04\ Practice\ Project\ (Start)
         
       - name: test the code
         run: npm test
+        working-directory: ./04\ Practice\ Project\ (Start)
       
       - name: build the code
         run: npm run build
+        working-directory: ./04\ Practice\ Project\ (Start)
       
     
