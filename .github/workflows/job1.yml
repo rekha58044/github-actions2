@@ -10,10 +10,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: install dependencies
+        run: npm install
       - name: lint the code
         run: npm run lint
+        working-directory: ./github-actions2
       - name: test the code
-        run: vitest run
+        run: npm test
+        working-directory: ./github-actions2
       - name: build the code
-        run: vite build
+        run: npm run build
+        working-directory: ./github-actions2
     
