@@ -2,8 +2,8 @@ name: event-job
 on: push
 jobs:
   event-job-1:
-        runs-on: ubuntu-latest
-        steps:
-          - name: print events
-            run: echo "${{toJson(github)}}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: print events
+        run: echo "${{toJson(github)}}"
           
