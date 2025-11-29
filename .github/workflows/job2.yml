@@ -1,9 +1,9 @@
 name: event-job
-on: push
+on: issues
 jobs:
   event-job-1:
     runs-on: ubuntu-latest
     steps:
       - name: print events
-        run: echo "${{toJson(github)}}"
+        run: echo "${{toJson(github.event)}}"
           
