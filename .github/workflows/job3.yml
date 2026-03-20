@@ -10,10 +10,10 @@ jobs:
               run: npm install
             - name: npm lint
               run: npm run lint
-              working-directory: Practice Project
+              working-directory: ./Practice Project
             - name: Test code
               run: run npm test
-              working-directory: Practice Project
+              working-directory: ./Practice Project
     build:
         runs-on: ubuntu-latest
         steps:
@@ -21,10 +21,10 @@ jobs:
             uses: actions/checkout@v4
           - name: Install dependencies
             run: npm install
-            working-directory: Practice Project
+            working-directory: ./Practice Project
           - name: Build code
             run: npm run build
-            working-directory: Practice Project
+            working-directory: ./Practice Project
           - name: upload artifacts
             uses: actions/upload-artifact@v4
             with:
