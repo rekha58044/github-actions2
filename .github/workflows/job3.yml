@@ -36,6 +36,14 @@ jobs:
         runs-on: ubuntu-latest
         needs: build
         steps:
+          - name: Get Build artifacts
+            uses: actions/download-artifact@v4
+            with:
+               name: dist-files
+               path: ./Practice Project/dist
+          - name: output contents
+            run: ls
+            working-directory: ./Practice Project/dist
           - name: Deploy
             run: echo "Deploying...."
     
